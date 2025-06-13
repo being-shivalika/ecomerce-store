@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🛒 Stylish E-Commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styl.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class=" text-gray-800">
+    <header>
+      <div class="p-6">
+        <h1 class="text-3xl font-bold mb-4" style="color: aliceblue;">🛍️ Explore Our Products</h1>
+
+    <!-- Filter Controls -->
+      <div class="flex flex-wrap gap-4 mb-6">
+        <select id="categoryFilter" class="p-2 rounded border">
+          <option value="all">All Categories</option>
+        </select>
+      <div class="nav-search">
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <input placeholder="Everything you need" class="search-input">
+      </div>
+        <div class="pricebar">
+          <input type="range" id="priceFilter" class="w-64" min="0" max="1000"  />
+          <span id="priceValue" style="color: aliceblue;">Max: $1000</span>
+      </div>
+      </div>
+     </header>
+
+      <div class="hero-section">
+     
+      <div class="hero-msg">
+        <p>Welome to my store , you'll get everything you need here . For buisness related queries go to www.gettomystore.in
+        </p>
+      </div>
+    </div>
+   
+    <!-- Product Grid -->
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded shadow max-w-lg w-full relative">
+      <button id="closeModal" class="absolute top-2 right-2 text-gray-500">✖</button>
+      <img id="modalImg" src="" alt="Product" class="w-full h-64 object-contain mb-4" />
+      <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
+      <p id="modalDesc" class="mb-2 text-sm text-gray-600"></p>
+      <p id="modalPrice" class="text-lg font-semibold mb-4"></p>
+      <button class="addCartBtn bg-indigo-600 text-white px-4 py-2 rounded">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>
